@@ -30,7 +30,7 @@ group :livecheck, optional: true do
   gem "ruby-progressbar", require: false
 end
 group :man, optional: true do
-  gem "kramdown", require: false
+  gem "kramdown", ">= 2.5.0", require: false
 end
 group :pr_upload, :bottle, optional: true do
   gem "json_schemer", require: false
@@ -44,11 +44,11 @@ group :pry, optional: true do
   gem "pry", require: false
 end
 group :style, optional: true do
-  gem "rubocop", require: false
-  gem "rubocop-md", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rspec", require: false
-  gem "rubocop-sorbet", require: false
+  gem "rubocop", ">= 1.65.1", require: false
+  gem "rubocop-md", ">= 1.2.4", require: false
+  gem "rubocop-performance", ">= 1.23.0", require: false
+  gem "rubocop-rspec", ">= 3.1.0", require: false
+  gem "rubocop-sorbet", ">= 0.8.6", require: false
 end
 group :tests, optional: true do
   gem "parallel_tests", require: false
@@ -58,7 +58,7 @@ group :tests, optional: true do
   gem "rspec-retry", require: false
   gem "rspec-sorbet", require: false
   gem "simplecov", require: false
-  gem "simplecov-cobertura", require: false
+  gem "simplecov-cobertura", ">= 3.0.0", require: false
 end
 group :typecheck, optional: true do
   gem "method_source", require: false
@@ -73,7 +73,7 @@ end
 
 # shared gems (used by multiple groups)
 group :audit, :bump_unversioned_casks, :livecheck, optional: true do
-  gem "rexml", require: false
+  gem "rexml", ">= 3.4.2", require: false
 end
 
 # vendored gems (no group)
